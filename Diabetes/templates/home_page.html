@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url("{% static 'images/im3.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            margin-left: 70px;
+        }
+
+        nav .logo i {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 30px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+            padding-right: 60px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #212120;
+            background-color: rgb(172, 172, 169);
+            border-radius: 7px;
+            padding: 7px;
+            transform: scale(1.5sec);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 180px;
+            margin-right: 450px;
+            font-size: 70px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            text-shadow: 5px 5px 5px rgb(51, 75, 51);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-hand-holding-medical"></i>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/login/">LogIn</a></li>
+                <li><a href="/register/">Sign Up</a></li>
+                <!-- <li><a href="#">LogOut</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to Diabetes Prediction</h1>
+        <!-- Add more content here as needed -->
+    </div>
+</body>
+</html>

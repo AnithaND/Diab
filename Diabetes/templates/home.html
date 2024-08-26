@@ -1,0 +1,371 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Predictor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="number"],
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <form action="/result/"method="post">
+    {% csrf_token %}
+    <h1>Diabetes Predictor</h1>
+    <label for="pregnancies">Number of Pregnancies:</label>
+    <input type="number" id="Pregnancies" name="Pregnancies" required>
+
+    <label for="glucose">Glucose Level:</label>
+    <input type="number" id="Glucose" name="Glucose" required>
+
+    <label for="bloodPressure">Blood Pressure:</label>
+    <input type="number" id="BloodPressure" name="BloodPressure" required>
+
+    <label for="skinThickness">Skin Thickness:</label>
+    <input type="number" id="SkinThickness" name="SkinThickness" required>
+
+    <label for="insulin">Insulin Level:</label>
+    <input type="number" id="Insulin" name="Insulin" required>
+
+    <label for="bmi">BMI:</label>
+    <input type="number" id="BMI" name="BMI" required>
+
+    <label for="diabetesPedigree">Diabetes Pedigree Function:</label>
+    <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="Age" name="Age" required>
+
+    <button type="submit">submit</button>
+  </form>
+</div>
+
+</body>
+</html> -->
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Predictor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      background-image: url("{% static 'images/im1.jpg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .container {
+      max-width: 800px; /* Adjusted width for better alignment */
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ccc7c7;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex; /* Added */
+      justify-content: space-between; /* Added */
+    }
+    .container .left,
+    .container .right {
+      width: 45%; /* Adjusted width for better alignment */
+    }
+    h1 {
+      text-align: center;
+      padding-top: 40px;
+      margin-bottom: 10px;
+      font-weight: bold; /* Updated font weight */
+      font-size: 42px; /* Updated font size */
+      text-shadow: 1px 2px 3px #063d39;
+      
+    }
+    h3 {
+      margin-left: 370px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="number"],
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 100px; /* Adjusted width */
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      display: block; /* Changed to block to center align */
+      margin: 0 auto; /* Center align */
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    .btn{
+      padding-top: 10px;
+      margin-left: 82%;
+      
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div>
+      <a href="/register/" class="btn">SignUp</a> &emsp;<a href="/login/" class="btn">LogIn</a>
+      <h1>Diabetes Predictor</h1>
+      <br><br>
+        <h3>Input Data</h3>
+    </div>
+
+<div class="container">
+  <div class="left">
+    <form action="/result/" method="post">
+      {% csrf_token %}
+      
+      <label for="pregnancies">Number of Pregnancies:</label>
+      <input type="number" id="Pregnancies" name="Pregnancies" required>
+
+      <label for="glucose">Glucose Level:</label>
+      <input type="number" id="Glucose" name="Glucose" required>
+
+      <label for="bloodPressure">Blood Pressure:</label>
+      <input type="number" id="BloodPressure" name="BloodPressure" required>
+
+      <label for="skinThickness">Skin Thickness:</label>
+      <input type="number" id="SkinThickness" name="SkinThickness" required>
+    </div>
+
+    <div class="right">
+      <label for="insulin">Insulin Level:</label>
+      <input type="number" id="Insulin" name="Insulin" required>
+
+      <label for="bmi">BMI:</label>
+      <input type="number" id="BMI" name="BMI" required>
+
+      <label for="diabetesPedigree">Diabetes Pedigree Function:</label>
+      <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="Age" name="Age" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+</div>
+
+</body>
+</html> -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Predictor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      background-image: url("{% static 'images/im1.jpg' %}");
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.8;
+    }
+    .container {
+      max-width: 800px; /* Adjusted max-width */
+      margin: 20px auto; /* Reduced margin */
+      padding: 10px; /* Reduced padding */
+      background-color: #ccc7c7;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+    }
+    .container .left,
+    .container .right {
+      width: 48%; /* Adjusted width */
+    }
+    h1 {
+      text-align: center;
+      padding-top: 25px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 42px;
+      text-shadow: 1px 2px 3px #063d39;
+    }
+    h3 {
+      margin-left: 370px; /* Adjusted margin-left */
+      background-color: #fff;
+      width: fit-content;
+      border-radius: 6px;
+      padding: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="number"],
+    input[type="text"] {
+      width: calc(100% - 22px); /* Adjusted width */
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+    button[type="submit"] {
+      width: 40%; /* Adjusted width */
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-left: 30%;
+      transition: background-color 0.3s;
+    }
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #303132;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      margin-right: 10px; /* Added margin-right */
+    }
+    .btn:hover {
+      background-color: #252a25;
+    }
+    .form-group {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    /* Style for login button */
+    .login-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 20px; /* Added margin-right */
+      margin-top: 10px; /* Added margin-top */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="login-container"> <!-- Added container for login button alignment -->
+      <a href="/register/" class="btn">SignUp</a>
+      <a href="/login/" class="btn">LogIn</a>
+    </div>
+    <h1>DIABETES PREDICTION</h1>
+    <br><br>
+    <h3>Input Data</h3>
+
+    <div class="container">
+      <div class="left form-group"> <!-- Added form-group class -->
+        <form action="/result/" method="post">
+          {% csrf_token %}
+
+          <label for="pregnancies">Number of Pregnancies:</label>
+          <input type="number" id="Pregnancies" name="Pregnancies" required>
+
+          <label for="glucose">Glucose Level:</label>
+          <input type="number" id="Glucose" name="Glucose" required>
+
+          <label for="bloodPressure">Blood Pressure:</label>
+          <input type="number" id="BloodPressure" name="BloodPressure" required>
+
+          <label for="skinThickness">Skin Thickness:</label>
+          <input type="number" id="SkinThickness" name="SkinThickness" required>
+        </div>
+
+        <div class="right form-group"> <!-- Added form-group class -->
+          <label for="insulin">Insulin Level:</label>
+          <input type="number" id="Insulin" name="Insulin" required>
+
+          <label for="bmi">BMI:</label>
+          <input type="number" id="BMI" name="BMI" required>
+
+          <label for="diabetesPedigree">Diabetes Pedigree Function:</label>
+          <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required>
+
+          <label for="age">Age:</label>
+          <input type="number" id="Age" name="Age" required>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4d3d3; /* Updated background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("{% static 'images/im1.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 90px;
+            background-color: #4e4f4f;
+        }
+        
+        .login-container {
+            background-color: #96adad; /* Updated background color */
+            padding: 20px;
+            border-radius: 8px; /* Increased border radius */
+            box-shadow: 0 9px 14px rgba(122, 52, 52, 0.2); /* Added shadow effect */
+            width: 520px; /* Increased width */
+            height: 380px;
+        }
+        
+        .login-container h2 {
+            /* margin-bottom: 20px; */
+            padding: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Applied font style */
+            color: #154646; /* Updated text color */
+            font-weight: bold; /* Updated font weight */
+            font-size: 32px;
+        }
+
+        .dia {
+            margin-bottom: 40px;
+            color: #2b021a; /* Updated text color */
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Applied font style */
+            font-weight: bold; /* Updated font weight */
+            font-size: 42px; /* Updated font size */
+            text-shadow: 1px 2px 3px #063d39; /* Added text shadow */
+            padding: 10px; /* Added padding */
+        }
+        
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 20px); /* Adjusted width */
+            padding: 10px;
+            margin-bottom: 10px; /* Increased margin bottom */
+            border: 1px solid #c9c8c8;
+            border-radius: 15px;
+            font-size: 14px; /* Updated font size */
+        }
+        
+        .login-container input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px; /* Increased padding */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block; /* Made it block to center align */
+            margin-bottom: 10px; /* Added margin bottom */
+            margin-right: 30px;
+        }
+        
+        .login-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        p{
+            margin-left: 10px;
+            font-size: 17px;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="/" class="home-button btn btn-primary">Home</a>
+    <div>
+    <div>
+        <h1 class="dia">DIABETES PREDICTION</h1>
+    </div>
+    
+    <div class="login-container">
+        <form action="/verifyuser/" method="post"> <!-- Corrected syntax -->
+            <h2>LogIn</h2>
+            {% csrf_token %}
+            <p>Usename</p>
+            <input type="text" name="uname" placeholder="Enter the Username" required>
+            <p>Password</p>
+            <input type="password" name="psw" placeholder="Enter the Password" required><br>
+            <br>
+            <button class="btn btn-primary" type="submit" >Login</button>
+            <a href="/register/" class="btn btn-primary">SignUp</a>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+

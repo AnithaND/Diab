@@ -1,0 +1,68 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-image: url("{% static 'images/su3.jpg' %}"); */
+            background-color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .btn{
+            text-decoration: none;
+            background-color:#4c6565 ;
+            color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 20px;
+            margin-left: 700px;
+            margin-bottom: 50px;
+        }
+        .main{
+            width: fit-content; 
+            margin-top: 0px; 
+            margin-left:350px;  
+            color: #090909;
+            /* background-color: #4c6565; */
+            padding: 20px; /* Added padding */
+            border-radius: 8px; /* Added border-radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        h1{
+            font-size: 60px;  
+             /* Added box-shadow */
+        }
+        p{
+            margin-left: 170px;
+            font-size: 30px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+
+        .registration-image {
+            margin-top: 40px;
+            margin-left: 500px;
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="{% static 'images/su1.jpeg' %}" alt="Registration Successful" class="registration-image">
+    <div class="main">
+        <h1>Registration Successful !!!</h1>
+        <p>Thank You for registering</p>
+    </div> <br><br>
+    <div>
+        <a href="/login/" class="btn">LogIn</a>
+    </div>
+</body>
+</html>

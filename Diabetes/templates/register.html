@@ -1,0 +1,319 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        .form-container input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/saveuser/"method="post">
+        <h2>Register</h2>
+        {% csrf_token %}
+        
+            <input type="text" name="uname" placeholder="Username" required>
+            <input type="password" name="psw" placeholder="Password" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+</body>
+</html> -->
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4d3d3; /* Updated background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("{% static 'images/im1.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* opacity: 0.7; */
+            
+        }
+        .dia {
+            margin-bottom: 40px;
+            color: #2b021a; /* Updated text color */
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Applied font style */
+            font-weight: bold; /* Updated font weight */
+            font-size: 42px; /* Updated font size */
+            text-shadow: 1px 2px 3px #063d39; /* Added text shadow */
+            padding: 10px; /* Added padding */
+        }
+        
+        .form-container {
+            background-color: #96adad;
+            padding: 20px;
+            border-radius: 8px; /* Increased border radius */
+            box-shadow: 0 4px 10px rgba(76, 22, 22, 0.1); /* Added shadow effect */
+            width: 520px; /* Increased width */
+            height: 370px;
+            /* opacity: 0.7; */
+        }
+        
+        .form-container h2 {
+            margin-bottom: 20px;
+            padding: 10px;
+            padding-bottom: 30px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Applied font style */
+            color: #0d3131; /* Updated text color */
+            font-weight: bold;
+            font-size: 35px;
+        }
+        
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container input[type="email"] {
+            width: calc(100% - 20px); /* Adjusted width */
+            padding: 10px;
+            margin-bottom: 20px; /* Increased margin bottom */
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            font-size: 14px; /* Updated font size */
+        }
+        
+        .form-container input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px; /* Increased padding */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block; /* Made it block to center align */
+            margin-bottom: 10px; /* Added margin bottom */
+        }
+        
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h1 class="dia">DIABETES PREDICTION</h1>
+        </div>
+        <br>
+        <div class="form-container">
+        <form action="/saveuser/" method="post">
+            <h2>Register</h2>
+            {% csrf_token %}
+            
+            <input type="text" name="uname" placeholder="Username" required>
+            <input type="password" name="psw" placeholder="Password" required>
+            <input type="email" name="email" placeholder="Email" required> <br><br><br>
+            <button type="submit" class="btn btn-primary">Register</button>
+            <button><a href="/login/" class="btn btn-primary">Login</a></button>
+        </form>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4d3d3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("{% static 'images/im1.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .home-button {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            padding: 8px;
+            border-radius: 8px;
+            top: 20px;
+            right: 90px;
+            background-color: #4e4f4f;
+        }
+        .dia {
+            margin-bottom: 40px;
+            color: #2b021a;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 42px;
+            text-shadow: 1px 2px 3px #063d39;
+            padding: 10px;
+        }
+        
+        .form-container {
+            background-color: #96adad;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(76, 22, 22, 0.1);
+            width: 500px;
+            height: 420px;
+        }
+        
+        .form-container h2 {
+            margin-bottom: 10px;
+            padding: 10px;
+            padding-bottom: 15px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #0d3131;
+            font-weight: bold;
+            font-size: 35px;
+        }
+        
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 0px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+        
+        .form-container input[type="submit"] {
+            width: 48%; /* Adjusted width for two buttons side by side */
+            background-color: #2e6cae;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+        
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Styling for login button */
+        .form-container button[type="submit"] {
+            width: 14%; /* Adjusted width for two buttons side by side */
+            background-color: #2e6cae;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for login button hover */
+        .form-container button[type="submit"]:hover {
+            background-color: #21548b;
+        }
+        p{
+            margin-left: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="/" class="home-button btn btn-primary">Home</a>
+    <div>
+        <div>
+            <h1 class="dia">DIABETES PREDICTION</h1>
+        </div>
+        
+        <div class="form-container">
+            <form action="/saveuser/" method="post">
+                <h2>Register</h2>
+                {% csrf_token %}
+                <p>Usename</p>
+                <input type="text" name="uname" placeholder="Enter the Username" required>
+                <p>Password</p>
+                <input type="password" name="psw" placeholder="Enter the Password" required>
+                <p>Email</p>
+                <input style="margin-bottom: 20px;" type="email" name="email" placeholder="Enter the Email" required> 
+                <button type="submit" class="btn btn-primary"><a href="/success/" style="text-decoration: none; color: #fff;">Register</a></button>
+                <!-- Changed login link to button -->
+                <button type="submit" class="btn btn-primary"> <!-- Removed anchor tag -->
+                    <a href="/login/" style="text-decoration: none; color: #fff;">Login</a>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

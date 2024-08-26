@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("{% static 'images/im2.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+            margin-top: 10px; /* Added margin-top */
+        }
+        .login-container a {
+            padding: 10px 20px; /* Added padding */
+            background-color: #303132; /* Added background color */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-right: 10px; /* Added margin-right */
+        }
+        .login-container a:hover {
+            background-color: #252a25;
+        }
+        h1{
+            font-size: 60px;  
+            width: fit-content; 
+            margin-top: 250px; 
+            margin-left:250px;  
+            color: #fff;
+            background-color: #4c6565;
+            padding: 20px; /* Added padding */
+            border-radius: 8px; /* Added border-radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added box-shadow */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <a href="/" class="home-button btn btn-primary">Home</a>
+        <a href="/" class="home-button btn btn-primary">Logout</a>
+    </div>
+    <h1>Prediction: {{result}}</h1>
+</body>
+</html>
